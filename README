@@ -1,0 +1,6 @@
+C++ class template framework for defining arbitary execution pipelines.  Each node in the execution graph can take N inputs and produce M outputs.
+
+There are currently 3 class templates.
+1. proc_node: The basic node class.  Provides no synchronization of the input queue, and implements the CRTP pattern for non-virtual dispatch.
+2. shared_proc_node: A synchronized (thread-safe for shared objects) version of proc_node.
+3. active_proc_node: The thread-per-node "active object" version of the proc_node.  Still incomplete.
